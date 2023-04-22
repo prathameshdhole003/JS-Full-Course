@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Simple inline alert -->
+        <a href=# onclick="alert('And Boom guys, you just clicked this link')">Simple Inline Alert</a><br><br>
+
+        <!-- Function Call -->
+        <a href=# onclick="fun()">Function Call</a><br><br>
+
+        <!-- Inline Event -->
+        <a href="" id="anchor">Inline Event</a><br><br>
+
+        <!-- Event Listener -->
+        <a href="" id="anchor2">Event Listener</a>
+    </div>
+
+    <script>
+        function fun(){
+            alert("Alert using function call");
+        }
+
+        const anc = document.getElementById("anchor");
+        anc.onclick = function(){
+            alert("Most common way of writing funcitons again");
+        }
+
+        const anc1 = document.querySelector("#anchor2");
+        anc1.addEventListener('click', function() {
+            alert("Another way of creating event");
+        })
+    </script>
+</body>
+</html>

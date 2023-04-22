@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Events</title>
+</head>
+<body>
+    <p>Do you want to know my name</p>
+    <p id="showName"></p>
+    <button id="btn">Yes</button>
+
+    <script>
+        const displayName = () => {
+            document.getElementById("showName").innerHTML = "Loading...";
+            setTimeout(() => {
+                document.getElementById("showName").innerHTML = "Prathamesh";
+            }, 5000) //Name will be displayed after 5 sec
+        };
+
+        b = document.querySelector("#btn");
+        b.addEventListener("click", displayName);
+
+    </script>
+</body>
+</html>

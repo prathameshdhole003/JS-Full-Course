@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <p id="para" onmouseup="mouseup()" onmousedown="mousedown()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem soluta quisquam, perferendis nesciunt aperiam facilis eum provident reiciendis rerum dicta odit dolorum eaque modi et! Dolorem soluta ratione accusantium fuga saepe numquam cumque mollitia nostrum!</p>
+
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi at in animi ipsum illo ducimus eius aut iste voluptas voluptatum fugiat sunt vel atque natus, asperiores odio voluptatem modi delectus necessitatibus rem ex sed neque. Dolore maxime ea voluptate totam libero nesciunt ipsam, deserunt eos non? Adipisci quis aperiam quasi.</p>
+
+    <script>
+        function mouseup(){
+            document.getElementById("para").style.color = "red";
+        }
+        
+        function mousedown(){
+            document.getElementById("para").style.color = "green";
+        }
+
+        const over = document.getElementById("para1");
+        over.addEventListener('mouseenter', () => {
+            over.style.color = "blue";
+        })
+
+        const leave = document.getElementById("para1");
+        leave.addEventListener('mouseleave', () => {
+            over.style.color = "cyan";
+        })
+
+    </script>
+</body>
+</html>
